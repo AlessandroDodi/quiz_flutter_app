@@ -12,12 +12,13 @@ class Answer extends StatelessWidget {
         child: ElevatedButton(
           child: Text(answer),
           style: ButtonStyle(
-            backgroundColor:
-                MaterialStateProperty.all(Color.fromARGB(255, 0, 0, 0)),
-            foregroundColor:
-                MaterialStateProperty.all(Color.fromARGB(255, 255, 255, 255)),
+            backgroundColor: MaterialStateProperty.all(Colors.black),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
           ),
           onPressed: selectHandler,
         ));
   }
 }
+        // (questions[_questionIndex]['answer'] as List<String>).map(((q) => {
+        //   return Answer(q);
+        // })),
