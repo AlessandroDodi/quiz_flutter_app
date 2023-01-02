@@ -13,7 +13,7 @@ class _MyApp extends StatefulWidget {
 
 class _MyAppState extends State<_MyApp> {
   var _questionIndex = 0;
-  var questions = [
+  final questions = [
     {
       'question': 'What is your favourite movie?',
       'answer': ['Interstellar', 'La vita è bella', 'Good Will Hunting'],
@@ -26,7 +26,9 @@ class _MyAppState extends State<_MyApp> {
 
   void _answerQuestion() {
     setState(() {
-      _questionIndex += 1;
+      print(_questionIndex);
+      print(questions.length);
+      _questionIndex < questions.length - 1 ? _questionIndex += 1 : null;
       print(_questionIndex);
     });
   }
